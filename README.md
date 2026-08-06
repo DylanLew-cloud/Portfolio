@@ -1,5 +1,9 @@
 # 刘桥个人官网
 
+
 当前为开屏页 Demo。用浏览器直接打开 `index.html` 即可预览。
 
+
 中央文件夹卡片悬停时会缓动放大并播放顶部渐变视频；移出后平滑还原并复位视频。背景大字使用 Mona Sans，卡片所有文字使用 HarmonyOS Sans。
+
+<!-- Trigger GitHub Pages rebuild after media optimization. -->
