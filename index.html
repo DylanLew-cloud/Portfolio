@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="刘桥 — Visual & Interaction" />
     <title>刘桥's Website</title>
-    <link rel="stylesheet" href="./styles.css?v=20260806-mobile-release-fix2" />
+    <link rel="stylesheet" href="./styles.css?v=20260806-performance-optimized" />
   </head>
   <body>
     <main class="hero" aria-label="刘桥个人官网开屏页">
@@ -68,11 +68,11 @@
     <section class="works-content" aria-label="Works 作品集">
       <div class="carousel-viewport" aria-label="精选作品轮播">
         <div class="carousel-track">
-          <article class="carousel-slide" data-project="siming-youth-week"><img src="./assets/media/works/carousel-1.webp" alt="四明山青年创客周" /></article>
-          <article class="carousel-slide" data-project="xianwa"><img src="./assets/media/works/carousel-2.png" alt="掀瓦 XIANWA" /></article>
-          <article class="carousel-slide" data-project="guomei-film"><img src="./assets/media/works/carousel-3.png" alt="国美影业视觉识别系统" /></article>
-          <article class="carousel-slide" data-project="post-turing-test"><img src="./assets/media/works/carousel-4.png" alt="Post-Turing Test" /></article>
-          <article class="carousel-slide" data-project="new-shudi"><img src="./assets/media/works/carousel-5.webp" alt="新薯地“上上迁”" /></article>
+          <article class="carousel-slide" data-project="siming-youth-week"><img src="./assets/media/works/carousel-1.webp" alt="四明山青年创客周" fetchpriority="high" /></article>
+          <article class="carousel-slide" data-project="xianwa"><img src="./assets/media/works/carousel-2.webp" alt="掀瓦 XIANWA" loading="lazy" decoding="async" /></article>
+          <article class="carousel-slide" data-project="guomei-film"><img src="./assets/media/works/carousel-3.webp" alt="国美影业视觉识别系统" loading="lazy" decoding="async" /></article>
+          <article class="carousel-slide" data-project="post-turing-test"><img src="./assets/media/works/carousel-4.webp" alt="Post-Turing Test" loading="lazy" decoding="async" /></article>
+          <article class="carousel-slide" data-project="new-shudi"><img src="./assets/media/works/carousel-5.webp" alt="新薯地“上上迁”" loading="lazy" decoding="async" /></article>
         </div>
         <div class="carousel-dots" aria-label="轮播页码">
           <button type="button" aria-label="第 1 张"></button><button type="button" aria-label="第 2 张"></button><button class="is-current" type="button" aria-label="第 3 张"></button><button type="button" aria-label="第 4 张"></button><button type="button" aria-label="第 5 张"></button>
@@ -80,17 +80,17 @@
       </div>
 
       <div class="works-grid">
-        <article class="work-card" data-project="post-turing-test" tabindex="0"><img src="./assets/media/works/work-1.png" alt="Post-Turing Test" /><h2>Post-Turing Test</h2><p>装置 / 多模态交互</p></article>
-        <article class="work-card" data-project="a-nest-media-house" tabindex="0"><img src="./assets/media/works/work-3.png" alt="鸟巢科技艺术中心标识设计" /><h2>鸟巢科技艺术中心标识设计</h2><p>标识 / 视觉识别系统</p></article>
-        <article class="work-card" data-project="guomei-film" tabindex="0"><img src="./assets/media/works/work-4.png" alt="国美影业" /><h2>国美影业</h2><p>标识 / 视觉识别系统</p></article>
-        <article class="work-card" data-project="siming-youth-week" tabindex="0"><img src="./assets/media/works/work-9.png" alt="四明山青年创客周" /><h2>四明山青年创客周</h2><p>文化活动视觉 / 周边</p></article>
-        <article class="work-card" data-project="new-shudi" tabindex="0"><img src="./assets/media/works/work-5.png" alt="新薯地上上迁" /><h2>新薯地“上上迁”</h2><p>文化活动视觉 / 周边</p></article>
-        <article class="work-card" data-project="four-dimensional-motion" tabindex="0"><img src="./assets/media/works/work-7.png" alt="四维形意动线" /><h2>四维形意动线</h2><p>数字艺术 / 动态捕捉</p></article>
+        <article class="work-card" data-project="post-turing-test" tabindex="0"><img src="./assets/media/works/work-1.webp" alt="Post-Turing Test" loading="lazy" decoding="async" /><h2>Post-Turing Test</h2><p>装置 / 多模态交互</p></article>
+        <article class="work-card" data-project="a-nest-media-house" tabindex="0"><img src="./assets/media/works/work-3.webp" alt="鸟巢科技艺术中心标识设计" loading="lazy" decoding="async" /><h2>鸟巢科技艺术中心标识设计</h2><p>标识 / 视觉识别系统</p></article>
+        <article class="work-card" data-project="guomei-film" tabindex="0"><img src="./assets/media/works/work-4.webp" alt="国美影业" loading="lazy" decoding="async" /><h2>国美影业</h2><p>标识 / 视觉识别系统</p></article>
+        <article class="work-card" data-project="siming-youth-week" tabindex="0"><img src="./assets/media/works/work-9.webp" alt="四明山青年创客周" loading="lazy" decoding="async" /><h2>四明山青年创客周</h2><p>文化活动视觉 / 周边</p></article>
+        <article class="work-card" data-project="new-shudi" tabindex="0"><img src="./assets/media/works/work-5.webp" alt="新薯地上上迁" loading="lazy" decoding="async" /><h2>新薯地“上上迁”</h2><p>文化活动视觉 / 周边</p></article>
+        <article class="work-card" data-project="four-dimensional-motion" tabindex="0"><img src="./assets/media/works/work-7.webp" alt="四维形意动线" loading="lazy" decoding="async" /><h2>四维形意动线</h2><p>数字艺术 / 动态捕捉</p></article>
         <article class="work-card" data-project="xianwa" tabindex="0"><img src="./assets/media/works/work-8.png" alt="掀瓦 XIANWA" /><h2>掀瓦XIANWA</h2><p>标识 / 视觉识别系统 / 包装</p></article>
         <article class="work-card" data-project="ai-sleep-music" tabindex="0"><img src="./assets/media/works/work-13.webp" alt="AI助眠音乐体验空间" /><h2>AI助眠音乐体验空间</h2><p>视听交互 / UI</p></article>
-        <article class="work-card" data-project="xixi-wetland" tabindex="0"><img src="./assets/media/works/work-11.png" alt="西溪国家湿地公园导视系统" /><h2>西溪国家湿地公园导视系统</h2><p>公共信息</p></article>
+        <article class="work-card" data-project="xixi-wetland" tabindex="0"><img src="./assets/media/works/work-11.webp" alt="西溪国家湿地公园导视系统" loading="lazy" decoding="async" /><h2>西溪国家湿地公园导视系统</h2><p>公共信息</p></article>
         <article class="work-card" data-project="redcomedy" tabindex="0"><img src="./assets/media/works/work-10.png" alt="REDcomedy 喜剧社区" /><h2>REDcomedy喜剧社区</h2><p>营销活动视觉 / AIGC</p></article>
-        <article class="work-card" data-project="hana" tabindex="0"><img src="./assets/media/works/work-12.png" alt="HANA" /><h2>HANA</h2><p>标识 / 视觉识别系统 / 包装</p></article>
+        <article class="work-card" data-project="hana" tabindex="0"><img src="./assets/media/works/work-12.webp" alt="HANA" loading="lazy" decoding="async" /><h2>HANA</h2><p>标识 / 视觉识别系统 / 包装</p></article>
       </div>
       <p class="works-more" aria-label="持续更新中···"><span aria-hidden="true">持</span><span aria-hidden="true">续</span><span aria-hidden="true">更</span><span aria-hidden="true">新</span><span aria-hidden="true">中</span><span aria-hidden="true">·</span><span aria-hidden="true">·</span><span aria-hidden="true">·</span></p>
     </section>
@@ -109,12 +109,12 @@
           <p>The group brings together a diverse community—including design students, practitioners, artists, and curators—united by a commitment to graphic design, an open design philosophy, and a wide range of creative outcomes.</p>
           <p>Since 2024, Logical Ring Visual Study Group has successfully conducted over 20 sessions and produced hundreds of graphic design works.</p>
         </div>
-        <div class="free-creative-footer-qr"><img src="./assets/media/free-creative/art-06.png" alt="逻辑环视觉研学组二维码" /><span>小红书：逻辑环视觉研学组</span></div>
+        <div class="free-creative-footer-qr"><img src="./assets/media/free-creative/art-06.png" alt="逻辑环视觉研学组二维码" loading="lazy" decoding="async" /><span>小红书：逻辑环视觉研学组</span></div>
       </footer>
     </section>
 
     <section class="ai-coding-page" aria-label="AI Coding">
-      <figure class="ai-coding-hero-image"><img src="./assets/media/ai-coding/hero.png" alt="Harness and synergy" /></figure>
+      <figure class="ai-coding-hero-image"><img src="./assets/media/ai-coding/hero.webp" alt="Harness and synergy" loading="lazy" decoding="async" /></figure>
       <div class="ai-coding-details">
       <header class="ai-coding-intro">
         <p class="ai-coding-title ai-coding-title--cn"><b>个人工作流概述</b></p>
@@ -129,8 +129,8 @@
         <button class="ai-workflow-button" type="button" role="tab" aria-selected="false" aria-controls="ai-workflow-aigv" data-ai-workflow="aigv">基于创意视觉的AIGV Workflow</button>
       </div>
       <div class="ai-workflow-cards">
-        <article class="ai-workflow-card is-active" id="ai-workflow-vibe" role="tabpanel"><img src="./assets/media/ai-coding/workflow-vibe.png" alt="基于前端交互的 Vibecoding Workflow" /></article>
-        <article class="ai-workflow-card" id="ai-workflow-aigv" role="tabpanel" hidden><img src="./assets/media/ai-coding/workflow-aigv.png" alt="基于创意视觉的 AIGV Workflow" /></article>
+        <article class="ai-workflow-card is-active" id="ai-workflow-vibe" role="tabpanel"><img src="./assets/media/ai-coding/workflow-vibe.png" alt="基于前端交互的 Vibecoding Workflow" loading="lazy" decoding="async" /></article>
+        <article class="ai-workflow-card" id="ai-workflow-aigv" role="tabpanel" hidden><img src="./assets/media/ai-coding/workflow-aigv.png" alt="基于创意视觉的 AIGV Workflow" loading="lazy" decoding="async" /></article>
       </div>
 
       <section class="ai-skills-section" aria-labelledby="ai-skills-heading">
@@ -145,23 +145,23 @@
 
         <div class="ai-skills-grid" aria-label="个人提炼 Skills">
           <button class="ai-skill-card is-active" type="button" data-ai-skill="reference" aria-expanded="true" aria-controls="ai-skill-reference">
-            <img src="./assets/media/ai-coding/skills/skill-reference-card.png" alt="reference-interaction-prototype Skill" />
+            <img src="./assets/media/ai-coding/skills/skill-reference-card.png" alt="reference-interaction-prototype Skill" loading="lazy" decoding="async" />
           </button>
           <button class="ai-skill-card" type="button" data-ai-skill="webgl" aria-expanded="false" aria-controls="ai-skill-webgl">
-            <img src="./assets/media/ai-coding/skills/skill-webgl-card.png" alt="build-lightweight-webgl-model Skill" />
+            <img src="./assets/media/ai-coding/skills/skill-webgl-card.png" alt="build-lightweight-webgl-model Skill" loading="lazy" decoding="async" />
           </button>
           <div class="ai-skill-card ai-skill-card--exploring" aria-label="持续探索中的更多 Skills、插件和产品">
-            <img src="./assets/media/ai-coding/skills/skill-exploring-card.png" alt="持续探索中" />
+            <img src="./assets/media/ai-coding/skills/skill-exploring-card.png" alt="持续探索中" loading="lazy" decoding="async" />
           </div>
         </div>
 
         <div class="ai-skill-details">
           <article class="ai-skill-detail ai-skill-detail--reference is-active" id="ai-skill-reference">
-            <img src="./assets/media/ai-coding/skills/skill-reference-detail.png" alt="reference-interaction-prototype 技能概要" />
+            <img src="./assets/media/ai-coding/skills/skill-reference-detail.png" alt="reference-interaction-prototype 技能概要" loading="lazy" decoding="async" />
             <a class="ai-skill-download" href="./assets/media/ai-coding/skills/reference-interaction-prototype.zip" download="reference-interaction-prototype-Skill.zip" aria-label="下载 reference-interaction-prototype Skill"><img src="./assets/media/ai-coding/skills/download-button.png" alt="" /></a>
           </article>
           <article class="ai-skill-detail ai-skill-detail--webgl" id="ai-skill-webgl" hidden>
-            <img src="./assets/media/ai-coding/skills/skill-webgl-detail.png" alt="build-lightweight-webgl-model 技能概要" />
+            <img src="./assets/media/ai-coding/skills/skill-webgl-detail.png" alt="build-lightweight-webgl-model 技能概要" loading="lazy" decoding="async" />
             <a class="ai-skill-download" href="./assets/media/ai-coding/skills/build-lightweight-webgl-model.zip" download="build-lightweight-webgl-model.zip" aria-label="下载 build-lightweight-webgl-model Skill"><img src="./assets/media/ai-coding/skills/download-button.png" alt="" /></a>
           </article>
         </div>
@@ -243,9 +243,9 @@
           </article>
         </div>
       </div>
-      <img class="about-fixed-photo" src="./assets/media/about-photo.jpg" alt="刘桥" />
+      <img class="about-fixed-photo" src="./assets/media/about-photo.jpg" alt="刘桥" loading="lazy" decoding="async" />
     </section>
     <script src="./assets/models/personal-logo-web.js"></script>
-    <script src="./script.js?v=20260806-image-optimized"></script>
+    <script src="./script.js?v=20260806-performance-optimized"></script>
   </body>
 </html>

@@ -156,8 +156,25 @@ function openLogoPage() {
   window.requestAnimationFrame(() => redrawLogoModel());
 }
 
+const optimizedProjectFiles = new Set([
+  'a-nest-media-house/1.jpg', 'a-nest-media-house/4.png',
+  'ai-sleep-music/5.png', 'ai-sleep-music/6.png',
+  'four-dimensional-motion/1.jpg', 'four-dimensional-motion/2.jpg', 'four-dimensional-motion/3.jpg', 'four-dimensional-motion/4.jpg', 'four-dimensional-motion/5.png',
+  'hana/2.jpg', 'hana/3.jpg', 'hana/4.png',
+  'new-shudi/1.png', 'new-shudi/5.png',
+  'post-turing-test/1.jpg', 'post-turing-test/4.png', 'post-turing-test/5.jpg', 'post-turing-test/7.png',
+  'redcomedy/1.jpg', 'redcomedy/2.jpg', 'redcomedy/3.jpg',
+  'siming-youth-week/3.jpg', 'siming-youth-week/6.jpg',
+  'xianwa/1.jpg', 'xianwa/4.jpg', 'xianwa/5.jpg', 'xianwa/6.jpg', 'xianwa/7.jpg', 'xianwa/9.jpg',
+  'xixi-wetland/1.jpg', 'xixi-wetland/2.jpg', 'xixi-wetland/3.png'
+]);
+
+const preferredProjectFile = (slug, file) => optimizedProjectFiles.has(`${slug}/${file}`)
+  ? file.replace(/\.(?:jpe?g|png)$/i, '.webp')
+  : file;
+
 const makeProjectMedia = (slug, files) => files.map((file) => ({
-  src: `./assets/media/projects/${slug}/${file}`,
+  src: `./assets/media/projects/${slug}/${preferredProjectFile(slug, file)}`,
   type: file.toLowerCase().endsWith('.mp4') ? 'video' : 'image'
 }));
 
@@ -203,9 +220,11 @@ function renderFreeCreativeGallery() {
     card.style.justifySelf = artwork.align;
     card.style.setProperty('--free-offset', artwork.offset);
     const image = document.createElement('img');
-    image.src = `./assets/media/free-creative/${artwork.file}`;
+    const optimizedFreeCreativeFiles = new Set(['art-09.png', 'art-10.png', 'art-14.jpg', 'art-21.png', 'art-22.png', 'art-23.jpg']);
+    image.src = `./assets/media/free-creative/${optimizedFreeCreativeFiles.has(artwork.file) ? artwork.file.replace(/\.(?:jpe?g|png)$/i, '.webp') : artwork.file}`;
     image.alt = artwork.cn;
-    image.loading = index < 5 ? 'eager' : 'lazy';
+    image.loading = 'lazy';
+    image.decoding = 'async';
     const info = document.createElement('div');
     info.className = 'free-art-card-info';
     const nameCn = document.createElement('strong');
@@ -295,12 +314,12 @@ const projectData = {
     category: '装置/人机交互', client: '无（学术研究）', title: 'Post-Turing Test\n（后图灵测试）',
     intro: ['图灵测试曾以“人”作为参照，追问机器能否在语言交流中表现出近似于人的智能。《后图灵测试》则将这一关系倒置。当“机器性”成为判断标准，而“人性”作为被反向检测出的残留出现时，人将如何表演机器？', '相较于人类学研究的漫长历史，我们对于“机器性”的想象仍然有限。作品系统性收集835条主流AI模型关于人机区别、机器特征与machine-likeness的回答，并经编码、聚类与蒸馏，提炼为装置中的判断维度与代理系统，从而开启一场反向检测。', '在装置中，参与者提交自身的机器性声明，并接受代理系统的持续追问。其语言、声音、表情、姿态等多模态信息，将被转化为综合评分，成为检测依据。', '作品进一步探讨，在这一倒置的权力关系下，个体如何通过具身表演呈现自身对于机器的想象，以及这一过程中可能显现的控制、失权与自我规训。'],
     credits: [['年份', '2026'], ['算法 / 开发', 'LI ZHE'], ['三维美术', 'ZHANG WENJIA'], ['计算视觉', 'LIU DEZHENG'], ['装置设计', 'LI ZHE、LIU DEZHENG']],
-    media: [{ src: './assets/media/projects/post-turing-test/0.mp4', type: 'video' }, ...makeProjectMedia('post-turing-test', ['1.jpg', '2.webp', '3.jpg', '4.png', '5.jpg', '6.png', '7.png'])]
+    media: [{ src: './assets/media/projects/post-turing-test/0.optimized.mp4', type: 'video' }, ...makeProjectMedia('post-turing-test', ['1.jpg', '2.webp', '3.jpg', '4.png', '5.jpg', '6.png', '7.png'])]
   },
   'a-nest-media-house': {
     category: '标识 / 视觉识别系统', client: '国家体育中心（鸟巢）', title: '鸟巢科技艺术中心标识设计',
     intro: ['4月27日，鸟巢科技艺术中心正式对外开放，启幕大展「可能世界档案：2026国际科技艺术展」同步亮相。', '鸟巢科技艺术中心以科技艺术破题，构建“硬件+平台+内容生产”三合一体系，最终将鸟巢“蝶变”为世界艺术的中心，成为“文化+科技+体育”的综合体。', '会议决定，“鸟巢科技艺术中心”英文名定为 A Nest Media House，强调媒体属性与增量价值。其中，“Nest”寓意孕育、孵化，对应英文缩写重新诠释——', 'A: Art（艺术）\nN: Nurture（孕育）\nE: Education（教育）\nS: Science（科学）\nT: Technology（技术）。', '建议综合以上概念，重新设计动态 logo；展览开幕口号“让科技被感知，让未来被看见”可以作为有效 slogan。'],
-    credits: [['年份', '2026'], ['艺术指导', 'YU ZHEN'], ['平面设计', 'LIU DEZHENG']], media: [...makeProjectMedia('a-nest-media-house', ['1.jpg', '2.mp4']), { src: './assets/media/projects/a-nest-media-house/4.png' }, ...makeProjectMedia('a-nest-media-house', ['3.png'])]
+    credits: [['年份', '2026'], ['艺术指导', 'YU ZHEN'], ['平面设计', 'LIU DEZHENG']], media: [...makeProjectMedia('a-nest-media-house', ['1.jpg']), { src: './assets/media/projects/a-nest-media-house/2.optimized.mp4', type: 'video' }, { src: `./assets/media/projects/a-nest-media-house/${preferredProjectFile('a-nest-media-house', '4.png')}` }, ...makeProjectMedia('a-nest-media-house', ['3.png'])]
   },
   'guomei-film': {
     category: '标识 / 视觉识别系统', client: '中国美术学院影视传媒有限公司', title: '国美影业品牌形象设计',
@@ -387,7 +406,7 @@ function renderProject(project) {
   if (!projectInfo || !projectMedia) return;
   const infoItems = [['类别', project.category], ['客户', project.client], ['项目名称', project.title]];
   projectInfo.innerHTML = `<h1>Information</h1><dl class="project-meta">${infoItems.map(([label, value]) => `<div><dt>${escapeProjectText(label)}</dt><dd>${escapeProjectText(value).replace(/\n/g, '<br />')}</dd></div>`).join('')}</dl><div class="project-description">${project.intro.map((paragraph) => `<p>${escapeProjectText(paragraph)}</p>`).join('')}</div><dl class="project-meta">${project.credits.map(([label, value]) => `<div><dt>${escapeProjectText(label)}</dt><dd>${escapeProjectText(value)}</dd></div>`).join('')}</dl>`;
-  projectMedia.innerHTML = `<h2>Related Images</h2><div class="project-media-list">${project.media.map((item, index) => `<div class="project-media-item${item.whiteBackground ? ' is-white-background' : ''}">${item.type === 'video' ? `<video src="${item.src}" autoplay muted loop playsinline aria-label="项目视频"></video>` : `<img src="${item.src}" alt="项目相关图片 ${index + 1}" loading="${index === 0 ? 'eager' : 'lazy'}" />`}</div>`).join('')}</div>`;
+  projectMedia.innerHTML = `<h2>Related Images</h2><div class="project-media-list">${project.media.map((item, index) => `<div class="project-media-item${item.whiteBackground ? ' is-white-background' : ''}">${item.type === 'video' ? `<video data-src="${item.src}" preload="none" autoplay muted loop playsinline aria-label="项目视频"></video>` : `<img src="${item.src}" alt="项目相关图片 ${index + 1}" loading="lazy" decoding="async" />`}</div>`).join('')}</div>`;
   projectMedia.querySelectorAll('img, video').forEach((media) => {
     const reveal = () => window.requestAnimationFrame(() => media.classList.add('is-loaded'));
     const isImage = media instanceof HTMLImageElement;
@@ -399,6 +418,25 @@ function renderProject(project) {
     media.addEventListener(isImage ? 'load' : 'loadeddata', reveal, { once: true });
     media.addEventListener('error', reveal, { once: true });
   });
+  const loadVideo = (video) => {
+    if (video.src) return;
+    video.src = video.dataset.src;
+    video.removeAttribute('data-src');
+    video.play().catch(() => {});
+  };
+  const deferredVideos = projectMedia.querySelectorAll('video[data-src]');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadVideo(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '480px 0px' });
+    deferredVideos.forEach((video) => observer.observe(video));
+  } else {
+    deferredVideos.forEach(loadVideo);
+  }
 }
 
 function openProject(projectId) {

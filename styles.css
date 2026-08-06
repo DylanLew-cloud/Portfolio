@@ -1,14 +1,6 @@
 @font-face {
-  font-family: "HarmonyOS Sans";
-  src: url("./assets/fonts/HarmonyOS-Sans.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "HarmonyOS Sans SC";
-  src: url("./assets/fonts/HarmonyOS-Sans-SC.ttf") format("truetype");
+  src: url("./assets/fonts/HarmonyOS-Sans-SC-subset.woff2") format("woff2");
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -16,23 +8,7 @@
 
 @font-face {
   font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-ExtraLight.otf") format("opentype");
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-Light.otf") format("opentype");
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-LightItalic.otf") format("opentype");
+  src: url("./assets/fonts/MonaSans-LightItalic-subset.woff2") format("woff2");
   font-style: italic;
   font-weight: 300;
   font-display: swap;
@@ -40,7 +16,7 @@
 
 @font-face {
   font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-Regular.otf") format("opentype");
+  src: url("./assets/fonts/MonaSans-Regular-subset.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -48,33 +24,9 @@
 
 @font-face {
   font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-Medium.otf") format("opentype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-SemiBold.otf") format("opentype");
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-ExtraBold.otf") format("opentype");
+  src: url("./assets/fonts/MonaSans-ExtraBold-subset.woff2") format("woff2");
   font-style: normal;
   font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Mona Sans";
-  src: url("./assets/fonts/MonaSans-Black.otf") format("opentype");
-  font-style: normal;
-  font-weight: 900;
   font-display: swap;
 }
 
